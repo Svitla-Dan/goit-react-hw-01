@@ -1,0 +1,57 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 400px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 100px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.name {
+  font-size: 24px;
+  font-weight: 900;
+}
+.info {
+  color: gray;
+  text-align: center;
+}
+.avatar {
+  border-radius: 50%;
+  background-color: #333;
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+}
+.like {
+  display: flex;
+  margin: 20px auto 0;
+  width: 380px;
+  height: 80px;
+  justify-content: space-around;
+  border-top: 2px solid gray;
+  background-color: #c0c0c0;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  justify-content: center;
+  align-items: center;
+}
+.item:first-child {
+  border-right: 2px solid gray;
+}
+.item:last-child {
+  border-left: 2px solid gray;
+}
+.nameItems {
+  font-size: 18px;
+  font-weight: 600;
+}

@@ -1,24 +1,24 @@
-import { useState } from "react";
-import "./App.css";
+import Profile from "../Profile/Profile";
+import userData from "../userData.json";
+import FriendList from "../FriendList/FriendList";
+import friends from "../friends.json";
+import TransactionHistory from "../TransactionHistory/TransactionHistory";
+import transactions from "../transactions.json";
+import css from "./App.module.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>Preparing to homework #1</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className={css.container}>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </div>
   );
 }
 
